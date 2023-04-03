@@ -12,10 +12,10 @@ char RcvData[8];
 CANMessage msg(0x456, counter, 8, CANData, CANStandard);
 
 void canListen() {  // ISR
-    // CANMessage msg;
+    CANMessage msg2;
 
-    if (can1.read(msg)) {
-        queue2.push(msg);
+    if (can1.read(msg2)) {
+        queue2.push(msg2);
     }
 }
 
